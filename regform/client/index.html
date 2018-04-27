@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://fb.me/react-0.14.0.js"></script>
+	<script src="https://fb.me/react-dom-0.14.0.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.25/browser.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<h1 class="page-header">Register</h1>
+				<div id="regform"></div>
+			</div>
+		</div>	
+	</div>
+	<script type="text/babel">
+		var RegForm = react.createClass({
+		render: function(){
+		return(
+			<div>
+				<form>
+					<div className="form-group">
+						<label htmlFor="firstName">First Name:</label>
+						<input type="text" className="form-control" placeholder="firstName" ref="firstName"/>
+					</div>
+					<div className="form-group">
+						<label htmlFor="lastName">Last Name:</label>
+						<input type="text" className="form-control" placeholder="lastName" ref="lastName"/>
+					</div>
+					<div className="form-group">
+						<label htmlFor="email">Email:</label>
+						<input type="email" className="form-control" placeholder="Email Address" ref="email"/>
+					</div>
+
+					<input type="submit" className="btn btn-primary" value="submit"/>
+
+				</form>
+			</div>
+		)
+	}
+	});
+	ReactDOM.render(
+	<RegForm/>,document.getElementById('regForm')
+	);
+    </script>
+</body>
+</html>
+
