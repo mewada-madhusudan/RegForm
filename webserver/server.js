@@ -6,7 +6,7 @@ var app = express();
 
 //set port
 
-app.set('port',(process.env.PORT || 3000));
+app.set('port',(process.env.PORT || 3333));
 
 // set static path 
 app.use(express.static(path.join(path.resolve(),'client')));
